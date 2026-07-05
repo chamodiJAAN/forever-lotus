@@ -473,7 +473,7 @@ function Login() {
             color: "#ccc",
             fontSize: "0.9rem"
           }}>
-           Don't have an account?{" "}
+          Don't have an account?{" "}
           <Link to="/signup" style={{
             color: "#ffcc80",
             textDecoration: "none",

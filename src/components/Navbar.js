@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "../assets/images/logo_image.png"; 
+import logo from "../assets/images/logo_image.png";
 
 function Navbar() {
   return (
@@ -7,12 +7,12 @@ function Navbar() {
       display: "flex",
       justifyContent: "space-between",
       alignItems: "center",
-      padding: "15px 50px",
+      padding: "12px 40px",
       background: "#8B6B4A",
       borderBottom: "2px solid #D4A373",
-      position: "sticky",    // ← THIS makes it stick
-      top: 0,                // ← Sticks to top
-      zIndex: 1000,          // ← Stays above everything
+      position: "sticky",
+      top: 0,
+      zIndex: 1000,
       boxShadow: "0 4px 20px rgba(0,0,0,0.2)"
     }}>
       {/* Logo */}
@@ -20,13 +20,13 @@ function Navbar() {
         textDecoration: "none", 
         display: "flex", 
         alignItems: "center", 
-        gap: "12px" 
+        gap: "10px" 
       }}>
         <img 
           src={logo} 
           alt="Forever Lotus Logo" 
           style={{ 
-            height: "50px",
+            height: "40px",
             width: "auto",
             objectFit: "contain"
           }} 
@@ -35,7 +35,7 @@ function Navbar() {
           color: "#fff", 
           fontFamily: "'Georgia', serif",
           fontStyle: "italic",
-          fontSize: "1.0rem",
+          fontSize: "1.5rem",
           margin: 0,
           fontWeight: "bold",
           letterSpacing: "2px",
@@ -45,16 +45,21 @@ function Navbar() {
         </h2>
       </Link>
       
-      {/* Navigation Menu */}
-      <div style={{ display: "flex", gap: "35px", alignItems: "center" }}>
+      {/* Navigation Menu - Short & Clean */}
+      <div style={{ 
+        display: "flex", 
+        gap: "20px", 
+        alignItems: "center",
+        fontSize: "0.9rem"
+      }}>
         <Link to="/about" style={{ 
           color: "#F5E6D3",
           textDecoration: "none", 
           fontWeight: "500",
-          fontSize: "1rem",
+          fontSize: "0.9rem",
           letterSpacing: "1px",
           transition: "all 0.3s ease",
-          padding: "8px 5px",
+          padding: "6px 4px",
           borderBottom: "2px solid transparent"
         }}
         onMouseEnter={(e) => {
@@ -65,16 +70,17 @@ function Navbar() {
           e.target.style.color = "#F5E6D3";
           e.target.style.borderBottom = "2px solid transparent";
         }}>
-          About Us
+          About
         </Link>
+        
         <Link to="/location" style={{ 
           color: "#F5E6D3",
           textDecoration: "none", 
           fontWeight: "500",
-          fontSize: "1rem",
+          fontSize: "0.9rem",
           letterSpacing: "1px",
           transition: "all 0.3s ease",
-          padding: "8px 5px",
+          padding: "6px 4px",
           borderBottom: "2px solid transparent"
         }}
         onMouseEnter={(e) => {
@@ -87,14 +93,15 @@ function Navbar() {
         }}>
           Location
         </Link>
+        
         <Link to="/app" style={{ 
           color: "#F5E6D3",
           textDecoration: "none", 
           fontWeight: "500",
-          fontSize: "1rem",
+          fontSize: "0.9rem",
           letterSpacing: "1px",
           transition: "all 0.3s ease",
-          padding: "8px 5px",
+          padding: "6px 4px",
           borderBottom: "2px solid transparent"
         }}
         onMouseEnter={(e) => {
@@ -107,14 +114,15 @@ function Navbar() {
         }}>
           App
         </Link>
-        <Link to="/contact" style={{ 
+        
+        <Link to="/shop" style={{ 
           color: "#F5E6D3",
           textDecoration: "none", 
           fontWeight: "500",
-          fontSize: "1rem",
+          fontSize: "0.9rem",
           letterSpacing: "1px",
           transition: "all 0.3s ease",
-          padding: "8px 5px",
+          padding: "6px 4px",
           borderBottom: "2px solid transparent"
         }}
         onMouseEnter={(e) => {
@@ -125,16 +133,41 @@ function Navbar() {
           e.target.style.color = "#F5E6D3";
           e.target.style.borderBottom = "2px solid transparent";
         }}>
-          Contact Us
+          Shop
         </Link>
+        
+        <Link to="/cart" style={{ 
+          color: "#F5E6D3",
+          textDecoration: "none", 
+          fontWeight: "500",
+          fontSize: "0.9rem",
+          letterSpacing: "1px",
+          transition: "all 0.3s ease",
+          padding: "6px 4px",
+          borderBottom: "2px solid transparent",
+          position: "relative"
+        }}
+        onMouseEnter={(e) => {
+          e.target.style.color = "#fff";
+          e.target.style.borderBottom = "2px solid #F5E6D3";
+        }}
+        onMouseLeave={(e) => {
+          e.target.style.color = "#F5E6D3";
+          e.target.style.borderBottom = "2px solid transparent";
+        }}>
+          🛒 Cart
+        </Link>
+        
+        {/* Login Button */}
         <Link to="/login" style={{ 
           background: "rgba(255,255,255,0.15)", 
           color: "#fff", 
-          padding: "8px 25px", 
-          borderRadius: "25px",
+          padding: "6px 18px", 
+          borderRadius: "20px",
           textDecoration: "none",
           fontWeight: "500",
-          border: "1px solid rgba(255,255,255,0.3)",
+          fontSize: "0.85rem",
+          border: "1px solid rgba(255,255,255,0.2)",
           backdropFilter: "blur(10px)",
           transition: "all 0.3s ease"
         }}
@@ -147,26 +180,6 @@ function Navbar() {
           e.target.style.transform = "scale(1)";
         }}>
           Login
-        </Link>
-        <Link to="/signup" style={{ 
-          color: "#F5E6D3",
-          textDecoration: "none", 
-          fontWeight: "500",
-          fontSize: "1rem",
-          letterSpacing: "1px",
-          transition: "all 0.3s ease",
-          padding: "8px 5px",
-          borderBottom: "2px solid transparent"
-        }}
-        onMouseEnter={(e) => {
-          e.target.style.color = "#fff";
-          e.target.style.borderBottom = "2px solid #F5E6D3";
-        }}
-        onMouseLeave={(e) => {
-          e.target.style.color = "#F5E6D3";
-          e.target.style.borderBottom = "2px solid transparent";
-        }}>
-          Sign Up
         </Link>
       </div>
     </nav>
