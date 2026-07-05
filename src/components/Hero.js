@@ -1,6 +1,8 @@
 // Import your background image
 import backgroundImage from "../assets/images/eco-friendly-swap.jpg";
 
+import { Link } from "react-router-dom"; // Add this import
+
 function Hero() {
   return (
     <section style={{
@@ -35,31 +37,35 @@ function Hero() {
         }}>
           Happy Days <span style={{ color: "#ffcc80" }}>with</span> Flowers
         </p>
-        <button style={{
-          marginTop: "35px",
-          padding: "18px 50px",
-          background: "rgba(255,255,255,0.15)",
-          color: "#fff",
-          border: "2px solid rgba(255,255,255,0.5)",
-          borderRadius: "50px",
-          fontSize: "1.2rem",
-          fontWeight: "bold",
-          cursor: "pointer",
-          letterSpacing: "3px",
-          backdropFilter: "blur(10px)",
-          transition: "all 0.3s ease",
-          textShadow: "0 2px 10px rgba(0,0,0,0.3)"
-        }}
-        onMouseEnter={(e) => {
-          e.target.style.background = "rgba(255,255,255,0.3)";
-          e.target.style.transform = "scale(1.05)";
-        }}
-        onMouseLeave={(e) => {
-          e.target.style.background = "rgba(255,255,255,0.15)";
-          e.target.style.transform = "scale(1)";
-        }}>
-          🌸 GRAB YOUR FLOWERS
-        </button>
+        
+        {/* 🌸 GRAB YOUR FLOWERS - Now a Link to Shop */}
+        <Link to="/shop">
+          <button style={{
+            marginTop: "35px",
+            padding: "18px 50px",
+            background: "rgba(255,255,255,0.15)",
+            color: "#fff",
+            border: "2px solid rgba(255,255,255,0.5)",
+            borderRadius: "50px",
+            fontSize: "1.2rem",
+            fontWeight: "bold",
+            cursor: "pointer",
+            letterSpacing: "3px",
+            backdropFilter: "blur(10px)",
+            transition: "all 0.3s ease",
+            textShadow: "0 2px 10px rgba(0,0,0,0.3)"
+          }}
+          onMouseEnter={(e) => {
+            e.target.style.background = "rgba(255,255,255,0.3)";
+            e.target.style.transform = "scale(1.05)";
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.background = "rgba(255,255,255,0.15)";
+            e.target.style.transform = "scale(1)";
+          }}>
+            🌸 GRAB YOUR FLOWERS
+          </button>
+        </Link>
       </div>
     </section>
   );

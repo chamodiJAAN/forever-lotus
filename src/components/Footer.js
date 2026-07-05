@@ -65,13 +65,14 @@ function Footer() {
             margin: 0
           }}>
             {[
-              { name: "About Us", path: "/about" },
-              { name: "Location", path: "/location" },
-              { name: "App", path: "/app" },
-              { name: "Contact Us", path: "/contact" },
-              { name: "Login", path: "/login" },
-              { name: "Sign Up", path: "/signup" }
-            ].map((item, index) => (
+                { name: "Shop", path: "/shop" },  // ← Add this
+                { name: "About Us", path: "/about" },
+                { name: "Location", path: "/location" },
+                { name: "App", path: "/app" },
+                { name: "Contact Us", path: "/contact" },
+                { name: "Login", path: "/login" },
+                { name: "Sign Up", path: "/signup" }
+              ].map((item, index) => (
               <li key={index} style={{ marginBottom: "6px" }}> {/* Reduced margin */}
                 <Link to={item.path} style={{
                   color: "#ccc",
